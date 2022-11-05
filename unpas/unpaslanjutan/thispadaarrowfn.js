@@ -1,4 +1,4 @@
-//lanjutan arrow function. 
+//lanjutan arrow function.
 //konsep this pada arrow function
 // membuat object pada javascript dengan menggunakan constructor Function
 
@@ -45,13 +45,36 @@ const santi = new Mahasiswa(); */
     this.sayHello = function () {
         console.log(`hallo, nama saya ${this.nama}, dan usia saya ${this.umur} tahun`);
     }
-    setInterval(() => {
+    setInterval(() => { // karena arrow tidak ada konsep  this sehingga dia mencari this ke luar
         console.log(this.umur++);
     }, 500);
 
 }
 
-const santi = new Mahasiswa();*/
+const santi = new Mahasiswa(); */
+
+
+
+
+
+
+//untuk contoharrowfn.html
+
+const box = document.querySelector('.box');
+box.addEventListener('click', function () {
+    let satu = 'size';
+    let dua = 'caption';
+
+    if (this.classList.contains(satu)) {
+        [satu, dua] = [dua, satu];
+    }
+
+    this.classList.toggle(satu);
+
+    setTimeout(() => {
+        this.classList.toggle(dua);
+    }, 600)
+})
 
 
 

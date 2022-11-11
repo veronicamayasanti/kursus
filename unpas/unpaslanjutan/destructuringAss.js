@@ -123,6 +123,18 @@ console.log(value);*/
 
 
 
+//mengembal field pada object, stelah dikirim sebagai parameter untuk function
+const mhs = {
+    id:123,
+    nama: 'maya wijaya',
+    umur: 30,
+    hobi: 'makan'
+}
+
+function getIdMhs({nama}){
+    return nama;
+}
+ console.log(getIdMhs(mhs))
 
 
 

@@ -7,23 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>wadahhtml</title>
     <style>
-        .hl {
-            background-color: salmon
+        body {
+            background-color: aquamarine;
+            text-align : center;
         }
+
+        .nama {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 80px;
+            color: white;
+        }
+
+        .nama span {
+            display: inline-block;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .nama span:hover {
+            transform: scale(2) translateY(-20);
+        }
+
     </style>
 </head>
 
 <body>
-
+<!--
     <ul>
         <li class="nama">veronica</li>
         <li class="nama">alexander</li>
         <li class="nama">michelina</li>
     </ul>
+-->
 
+<h1 id="nama" class="nama">veronica</h1>
 
-
-    <script src="forOfIn.js"></script>
+<script src="spreadOp.js"></script>
+    
 </body>
 
 </html>

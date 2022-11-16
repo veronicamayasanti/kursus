@@ -78,10 +78,10 @@
 
 
 // contoh 9, filtering
-function filterBy(type, ...values){
-    return values.filter(v => typeof v === type);
-}
+// function filterBy(type, ...values){
+//     return values.filter(v => typeof v === type);
+// }
 
-console.log(filterBy(`number`, 1,2,3, 'maya', false, 5, true, 'santi'));
+// console.log(filterBy(`number`, 1,2,3, 'maya', false, 5, true, 'santi'));
 
 

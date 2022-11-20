@@ -13,3 +13,20 @@ originalResult = result;
 
 result = result*2;
 document.writeln(`</br>${originalResult} * 2 = ${result}`);
+
+// operator unary
+ let angka = +1;
+ console.log(angka);
+
+ angka--;
+ console.log(angka);
+
+ angka++;
+ console.log(angka);
+
+ angka =- angka;
+ console.log(angka);
+ 
+ 
+ 
+ 

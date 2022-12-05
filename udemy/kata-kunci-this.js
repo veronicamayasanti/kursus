@@ -12,11 +12,35 @@ console.info(this);
 
 
 //this di function
-function sample(){
-    console.log(this);
+// function sample(){
+//     console.log(this);
     
+// }
+
+// sample();
+
+// this di dalam  nested function
+function sample() {
+    console.log(this);
+
+    function inner(){
+        console.log(this);
+        
+    }
+    inner();
+
 }
 
 sample();
 
-// this di dalam 
+
+// this di obejct method
+const person = {
+    name: 'thata',
+    sayHello: function(value){
+        console.log(`hello ${value} my name is ${this.name}`);
+        
+    }
+};
+
+person.sayHello('geo')

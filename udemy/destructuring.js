@@ -75,10 +75,65 @@ const person = {
 
 displayPerson(person);
 
+// destructuring di function parameter (2) terhdap array
+
+function sum([first, second]){
+    return first + second;
+}
+
+console.log(sum([3,5]));
+
+// Default Value
+// Yang paling menarik di destructuring adalah, kita bisa menambahkan default value
+// Jadi misal kita kita melakukan destructuring terhadap array, ternyata tidak ada datanya, maka kita bisa menambahkan default value
+// Begitu juga pada object, jika ternyata property nya tidak ada, maka kita bisa menambahkan default value
 
 
+// Default Value Destructuring Array
+{
+    const names = ['veronica','samantha'];
+    const [firstName, middleName = 'geo', lastName = 'alex'] = names;
+
+    console.log(firstName);
+    console.log(middleName);
+    console.log(lastName);
+    
+}
 
 
+// Kode : Default Value Destructuring Object
+{
+     const person = {
+        firstName: 'veronica', 
+        lastName: 'samantha'
+    };
+    
+    const {firstName, middleName = 'geo', lastName } = person;
 
+    console.log(firstName);
+    console.log(middleName);
+    console.log(lastName);
+}
+
+// Menggunakan Nama Variable Lain
+// Saat melakukan destructuring di Array, kita bisa dengan mudah membuat nama variable sesuka kita
+// Namun pada saat melakukan destructuring, kita harus membuat nama variable sama dengan nama property
+// Kita juga bisa menggunakan nama variable lain saat melakukan destructuring object jika kita mau
+
+{
+    const person = {
+        firstName: 'veronica',
+        lastName: 'samantha'
+    };
+
+    let { 
+        firstName: namaDepan, 
+        middleName: namaTengah = 'geo', 
+        lastName: namaBelakang = 'thata' } = person;
+
+    console.log(namaDepan);
+    console.log(namaTengah);
+    console.log(namaBelakang);
+}
 
 

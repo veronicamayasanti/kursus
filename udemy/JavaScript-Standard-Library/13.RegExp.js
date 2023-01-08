@@ -56,3 +56,36 @@
 }
 
 }
+
+
+// fitur RegExp
+// Assersions: indikasi awal dan akhir teks
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
+// Character Classes: membedakan antara huruf dan angka
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character
+// _Classes
+// Group dan Range: melakukan grouping atau range huruf atau angka
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_a
+// nd_Ranges
+// Quantifiers: menentukan jumlah huruf atau angka
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifie
+
+
+{
+
+const regex6 = /ek[ioaeu]/ig
+
+const name = "eko eki eka eku eke edo eko eki";
+    let result3;
+    while ((result3 = regex6.exec(name)) !== null) {
+        console.log(result3);
+        
+    }
+}
+
+{
+
+    const name = "eko eki eka eku eke edo eko eki";
+ 
+    
+}

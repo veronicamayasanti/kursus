@@ -6,17 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript Modules</title>
-    <script type="module" src="script/say.js"></script>
 </head>
 
 <body>
-<script type="module">
-
-    import {sayHello, sayGoodBye} from "./script/say.js"
-
-    sayHello("maya");
-    sayGoodBye("maya");
-</script>
+    <script type="Module">
+        import {name} from './script/variable.js';
+        console.info(name);
+    </script>
 </body>
 
 </html>

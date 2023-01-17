@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Module Object</title>
+</head>
+
+<body>
+    <script type="Module">
+
+import {Person, sayGoodBye, sayHello, sum} from "./script/aggregate.js";
+
+
+const person = new Person("maya");
+person.sayHello("joko");
+
+sayGoodBye("maya");
+sayHello("santi");
+
+console.log(sum(10,20));
+
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Module Object</title>
+</head>
+<body>
+<script type="Module">
+
+import * as veronica from "./script/module_Object.js";
+
+console.log(veronica.firstName);
+console.log(veronica.midlleName);
+console.log(veronica.lastName);
+
+
+veronica.hello();
+
+const person = new veronica.Person();
+
+
+</script>
+</body>
+</html>

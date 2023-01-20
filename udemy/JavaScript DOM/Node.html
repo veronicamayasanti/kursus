@@ -24,14 +24,19 @@
 
 
     <h2>Node Property</h2>
+    <p>Property di Node banyak berisi informasi referance ke Node lainnya, seperti ke node parent nya, node Childrennya atau node sebelumnya</p>
 
     <script>
 
         const menu = document.getElementById("menu")
         console.log(menu);
+        console.log(menu.childrenNodes);
+        
         
         const second = document.getElementById("second");
         console.log(second);
+        console.log(second.previousSibling);
+        
         
         
     </script>

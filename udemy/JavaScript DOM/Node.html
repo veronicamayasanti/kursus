@@ -26,12 +26,16 @@
     <h2>Node Property</h2>
     <p>Property di Node banyak berisi informasi referance ke Node lainnya, seperti ke node parent nya, node Childrennya atau node sebelumnya</p>
 
+
+    <h2>Node Method</h2>
+    <p>Method di node bisa digunakan untuk memanipulasi data Node di dalam Node tersebut, misal menambah/menghapus Node children</p>
+
     <script>
 
         const menu = document.getElementById("menu")
         console.log(menu);
         console.log(menu.childrenNodes);
-        
+        menu.removeChild(document.getElementById("First"));
         
         const second = document.getElementById("second");
         console.log(second);

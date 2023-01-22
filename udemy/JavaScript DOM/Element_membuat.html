@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>membuat element</title>
+</head>
+
+<body>
+    <h1>Membuat Element</h1>
+    <p>sebelumnya kita hanya mengambil element menggunakan id, artinya kita perlu buat terlebih dahulu elementnya di HTML</p>
+    <p>kia juga bisa membuat object element baru, dan menambahkannya ke halaman web</p>
+    <p>kita bisa enggunakan method creatElement(tag) pada Document</p>
+
+    <h4>ini hasil contoh</h4>
+
+    <div id="content" class="content"></div>
+
+    <script>
+
+        const content = document.getElementById("content");
+
+        const title = document.createElement("h1");
+        title.textContent = "Belajar JavaScript DOM";
+        content.appendChild(title);
+
+
+        const description = document.createElement("p");
+        description.textContent = "Selamat belajar javascript DOM";
+        content.appendChild(description);
+
+    </script>
+</body>
+
+</html>

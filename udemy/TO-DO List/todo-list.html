@@ -54,15 +54,8 @@
                 }
             }
 
-        // menampilkan todolist
 
-        function displayTodoList(){
-            clearTodoList();
-
-
-            for (let i = 0; i < todolist.length; i++){
-                const todo = todolist[i];
-
+            function addTodoList (todo){
                 const tr = document.createElement("tr");
                 const tdButton = document.createElement("td");
                 tr.appendChild(tdButton);
@@ -83,6 +76,21 @@
                 const todoListBody = document.getElementById("todoListBody");
                 todoListBody.appendChild(tr);
             }
+
+        // menampilkan todolist
+
+        function displayTodoList(){
+            clearTodoList();
+
+
+            for (let i = 0; i < todolist.length; i++){
+                const todo = todolist[i];
+
+                const searchText = document.getElementById("search").value.toLowerCase();
+                if(todo.toLowerCase().includes(searchText)){
+                    addTodoList(todo);
+                }
+            }
         }
 
         document.forms['todoForm'].onsubmit = function (event){
@@ -100,6 +108,16 @@
             displayTodoList();
             
         };
+
+        // mencari todolist
+        const searchInput = document.getElementById("search");
+        searchInput.onkeyup = function(){
+            displayTodoList();
+        }
+
+        searchInput.onkeydown = function() {
+            displayTodoList();
+        }
 
         displayTodoList();
     </script>

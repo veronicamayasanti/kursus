@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URL search param</title>
+</head>
+
+<body>
+    <form>
+        <label for="search">search
+            <input type="text" name="search" id="search">
+        </label>
+        <br>
+        <input type="button" id="searchButton" value="search">
+    </form>
+    <h1 id="response"></h1>
+
+
+    <script>
+
+        function doSearch() {
+            const ajax = new XMLHttpRequest();
+
+            const param = new URLSearchParams();
+            param.append("search", document.getElementById("search").value);
+
+            ajax.open("GET", ``)
+            ajax.onload = function() {
+                const response = document.getElementById("response");
+                response.innerText = ajax.responseText;
+                
+            }
+            ajax.send(param);
+        }
+        document.getElementById('searchButton').onclick = doSearch;
+    </script>
+</body>
+
+</html>

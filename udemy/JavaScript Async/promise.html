@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>promise</title>
+</head>
+
+<body>
+    
+
+
+    <script>
+
+     const promise = new promise(function (resolva, reject){
+
+         const ajax = new XMLHttpRequest();
+         ajax.open("GET", "API/produk.json");
+         ajax.onload = function() {
+            if (ajax.status === 200){
+                resolva(ajax.response);
+            }else {
+                reject(`error get product with response : ${ajax.responseText}`);
+            }
+         };
+         ajax.send();
+     });   
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>promise method</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Id:</td>
+                <td id="id"></td>
+            </tr>
+            <tr>
+                <td>name: </td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>price:</td>
+                <td id="price"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+
+        function getProduct(){
+         return new Promise(function (resolva, reject) {
+
+            const ajax = new XMLHttpRequest();
+            ajax.open("GET", `API/${produk}.json`);
+            ajax.onload = function () {
+                if (ajax.status === 200) {
+                    resolva(ajax.response);
+                } else {
+                    reject(`error get product with response : ${ajax.responseText}`);
+                }
+            };
+            ajax.send();
+        });
+        }
+        getProduct(produk)
+        .then(function (response){
+            return JSON.parse(response);
+        })
+        .then(function(json){
+            document.getElementById("id").textContent = json.id;
+            document.getElementById("name").textContent = json.name;
+            document.getElementById("price").textContent = json.price;
+
+        }
+        .catch(function (error) {
+            document.getElementById("id").textContent = error;
+            document.getElementById("name").textContent = error;
+            document.getElementById("price").textContent = error;
+        })
+        .finally(function (){
+            confirm.info("finally")
+        });
+
+    </script>
+</body>
+
+</html>

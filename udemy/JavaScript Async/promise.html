@@ -14,7 +14,7 @@
 
     <script>
 
-     const promise = new promise(function (resolva, reject){
+     const promise = new Promise(function (resolva, reject){
 
          const ajax = new XMLHttpRequest();
          ajax.open("GET", "API/produk.json");
@@ -27,6 +27,7 @@
          };
          ajax.send();
      });   
+     console.info(promise);
 
     </script>
 </body>

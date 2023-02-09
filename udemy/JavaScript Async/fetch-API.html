@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ajax Send JSON</title>
+    <title>fetch API </title>
 </head>
 
 <body>
@@ -24,17 +24,34 @@
 
 
     <script>
-        const request = new Request("hookbin.com")
-        method: "POST",
-        Headers: {
-            "content-Type": "application/json",
-            "accept": "application/json"
-        },
-        baby: JSON.stringify ({
-            username: document.getElementById("username").value,
-            password: document.getElementById("password").value
-        });
-        
+        function doLogin (){
+            const request = new Request("hookbin.com", {
+                method: "POST",
+                Headers: {
+                    "content-Type": "application/json",
+                    "accept": "application/json"
+                },
+                baby: JSON.stringify({
+                    username: document.getElementById("username").value,
+                    password: document.getElementById("password").value
+                })
+
+            });
+
+            //promise yg isinya obejct respon
+            const response = fetch(Request);
+
+            response
+                .then((response) => response.json())     
+                .then(function(json){
+                    document.getElementById("response").textContent = json.succes;
+                })     
+                .catch(function(error){
+                    document.getElementById("response").textContent = error;
+                })
+        }
+
+        document.getElementById("login").onclick = doLogin;
     </script>
 </body>
 

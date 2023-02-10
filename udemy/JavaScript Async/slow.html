@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slow</title>
+</head>
+<body>
+<button id="buttonTask"> click me</button>
+    <script>
+       
+       function slowLog(total){
+           for (let i = 0; i < total; i++) {
+               console.log(i);
+           }
+        }
+
+        document.getElementById("buttonTask").onclick = function(){
+            console.log("star");
+            slowLog(100000);
+            console.log("END");
+            
+            
+        } 
+
+    </script>
+</body>
+
+</html>

@@ -17,8 +17,8 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "ad" : 0,
-  "todo": "Programmer zaman now"
+  "ad" : 1,
+  "todo": "wpu"
 }
 
 ###
@@ -27,5 +27,5 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "id":0
+  "id":1
   }

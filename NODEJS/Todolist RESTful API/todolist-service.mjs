@@ -31,18 +31,18 @@ export class TodolistService {
         })
     }
 
-        updateTodo(request, respose){
+        updateTodo(request, response){
             request.addListener("data", (data) => {
                 const body = JSON.parse(data.toString());
-                if(this.todolist[body,id]) {
-                    this.todolist[body,id] = body.todo;
+                if(this.todolist[body.id]) {
+                    this.todolist[body.id] = body.todo;
                 }
 
                 response.write(this.getJSonTodoList());
                 response.end()
             })
         }
-        deleteTodo(request, respose){
+        deleteTodo(request, response){
             request.addListener("data", (data) => {
                 const body = JSON.parse(data.toString());
                 if(this.todolist[body.id]) {

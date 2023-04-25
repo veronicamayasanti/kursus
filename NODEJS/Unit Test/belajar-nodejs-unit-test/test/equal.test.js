@@ -7,7 +7,7 @@ test("test toBe", () => {
 
 test("test toEqual", () => {
     let person = {id: "eko1"};
-    object.assign(person, {name: "Eko"});
+    object.assign(person, {name: "Eko6"});
 
     expect(person).toEqual({id: "eko", name: "Eko"});
 })
